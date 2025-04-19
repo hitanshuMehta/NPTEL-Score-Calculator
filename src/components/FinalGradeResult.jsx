@@ -7,6 +7,7 @@ const FinalGradeResult = ({
   finalScore,
   grade,
   gradeNumber,
+  showGrade,
 }) => {
   return (
     <>
@@ -17,11 +18,12 @@ const FinalGradeResult = ({
       >
         Calculate Your Grade for Credit Transfer
       </button>
+
       {finalGradeError && (
         <p className="text-red-400 mt-4">{finalGradeError}</p>
       )}
 
-      {finalScore !== null && (
+      {showGrade && finalScore !== null && (
         <div className="mt-6 text-center">
           <p className="text-2xl text-green-400">Final Score: {finalScore}</p>
           <p className="text-xl text-green-400">

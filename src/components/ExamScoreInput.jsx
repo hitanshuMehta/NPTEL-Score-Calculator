@@ -8,6 +8,7 @@ const ExamScoreInput = ({
   examError,
   examScore,
   examPass,
+  setShowGrade,
 }) => {
   return (
     <div className="w-full max-w-4xl mb-8">
@@ -20,6 +21,7 @@ const ExamScoreInput = ({
         value={examMarks}
         onChange={(e) => handleExamChange(e.target.value)}
         disabled={assignmentPass === false}
+        onFocus={() => setShowGrade(false)}
         className="w-full p-2 bg-gray-800 rounded-md text-white focus:ring-2 focus:ring-green-400"
       />
       <button

@@ -9,6 +9,7 @@ const AssignmentInput = ({
   assignmentError,
   assignmentScore,
   assignmentPass,
+  setShowGrade,
 }) => {
   return (
     <div className="w-full max-w-4xl mb-8">
@@ -27,6 +28,7 @@ const AssignmentInput = ({
             value={m}
             onChange={(e) => handleAssignmentChange(i, e.target.value)}
             onKeyDown={(e) => handleAssignmentKeyPress(e, i)}
+            onFocus={() => setShowGrade(false)}
             className="p-2 bg-gray-800 rounded-md text-white focus:ring-2 focus:ring-blue-400"
           />
         ))}
